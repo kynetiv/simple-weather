@@ -3,13 +3,9 @@ package internal
 import (
 	"go.uber.org/zap"
 
-	"simple-weather/internal/client"
-	"simple-weather/internal/config"
-	"simple-weather/internal/handlers"
-)
-
-const (
-	openWeatherMapURL = "https://api.openweathermap.org/data/2.5"
+	"github.com/kynetiv/simple-weather/internal/client"
+	"github.com/kynetiv/simple-weather/internal/config"
+	"github.com/kynetiv/simple-weather/internal/handlers"
 )
 
 type WeatherService struct {

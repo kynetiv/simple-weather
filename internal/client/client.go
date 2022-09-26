@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"simple-weather/internal/config"
+	"github.com/kynetiv/simple-weather/internal/config"
 )
 
 type HttpClientGet interface {

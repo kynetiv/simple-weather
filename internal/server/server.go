@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"simple-weather/internal"
+	"github.com/kynetiv/simple-weather/internal"
 )
 
 type Server struct {

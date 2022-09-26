@@ -3,9 +3,9 @@ package main
 import (
 	"go.uber.org/zap"
 
-	"simple-weather/internal"
-	"simple-weather/internal/config"
-	"simple-weather/internal/server"
+	"github.com/kynetiv/simple-weather/internal"
+	"github.com/kynetiv/simple-weather/internal/config"
+	"github.com/kynetiv/simple-weather/internal/server"
 )
 
 func main() {

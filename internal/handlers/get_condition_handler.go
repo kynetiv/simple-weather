@@ -9,8 +9,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"simple-weather/internal/client"
-	"simple-weather/internal/models"
+	"github.com/kynetiv/simple-weather/internal/client"
+	"github.com/kynetiv/simple-weather/internal/models"
 )
 
 type GetConditionHandler struct {
@@ -57,8 +57,7 @@ func (h *GetConditionHandler) getCondition(logger *zap.Logger, p url.Values) (re
 	}
 
 	if lon = p.Get("lon"); lon == "" {
-		resp.Error = "lon query param is required"
-		return resp, fmt.Errorf("bad request")
+		return resp, fmt.Errorf("lon query param is required")
 	}
 
 	res, err := h.Client.GetConditions(lat, lon)
@@ -80,10 +79,10 @@ func (h *GetConditionHandler) getCondition(logger *zap.Logger, p url.Values) (re
 	if openData.Code != nil {
 		rawRes := string(body)
 		logger.Error("bad response from open api", zap.Any("body", rawRes))
-		return resp, fmt.Errorf("request failed", rawRes)
+		return resp, fmt.Errorf("request failed: %s", rawRes)
 	}
 
-	logger.Debug("weather data", zap.Any("raw", openData))
+	logger.Info("weather data", zap.Any("raw", string(body)))
 
 	return h.getConditionResponse(openData), nil
 }

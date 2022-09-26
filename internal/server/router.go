@@ -1,7 +1,7 @@
 package server
 
 import (
-	"simple-weather/internal"
+	"github.com/kynetiv/simple-weather/internal"
 )
 
 func (s *Server) AttachRoutes(api internal.WeatherService) {

@@ -1,4 +1,4 @@
-module simple-weather
+module github.com/kynetiv/simple-weather
 
 go 1.19
 

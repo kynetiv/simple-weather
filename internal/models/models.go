@@ -6,7 +6,6 @@ type ConditionResponse struct {
 	Temp      *float64 `json:"temp"`
 	FeelsTemp *float64 `json:"feels_temp"`
 	FeelsLike string   `json:"feels_like"`
-	Error     string   `json:"error,omitempty"`
 }
 
 type OpenWeatherOneCallResponse struct {
